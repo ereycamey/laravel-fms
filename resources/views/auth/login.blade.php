@@ -32,7 +32,7 @@
                            name="_token"
                            value="{{ csrf_token() }}">
 
-                    <div class="form-group" style="margin-bottom: 15px; font-weight: bold;">
+                    <div class="form-group" style="margin-bottom: 15px;">
                         <label class="col-md-4 control-label" 
                         style="font-weight: bold;"> @lang('quickadmin.qa_email')</label>
 
@@ -48,18 +48,23 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">@lang('quickadmin.qa_password')</label>
+                    <div class="form-group" style="margin-bottom: 15px;">
+                        <label class="col-md-4 control-label"  style="font-weight: bold;">@lang('quickadmin.qa_password')</label>
 
                         <div class="col-md-6">
                             <input type="password"
                                    class="form-control"
+                                   style="width: 100%;
+                                        padding: 10px;
+                                        border: 1px solid #ccc;
+                                        border-radius: 5px;"
                                    name="password">
                         </div>
                     </div>
 
                     <div class="form-group">
-    <div class="col-md-6 col-md-offset-4" style="display: flex; justify-content: space-between;">
+    <div class="col-md-6 col-md-offset-4" style="display: flex; justify-content: space-between;  color: darkblue;
+            text-decoration: none;">
         <a href="{{ route('auth.password.reset') }}">@lang('quickadmin.qa_forgot_password')</a>
         <a href="{{ route('auth.register') }}">@lang('quickadmin.qa_registration')</a>
     </div>
@@ -79,7 +84,14 @@
     <div class="col-md-6 col-md-offset-4">
         <button type="submit"
                 class="btn btn-primary"
-                style="width: 200px; margin-right: -10px; background-color: darkblue; color: white; border: none; padding: 10px 20px; border-radius: 5px; font-size: 16px;">
+                style="background-color: darkblue;
+            width: 180px;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;">
             @lang('quickadmin.qa_login')
         </button>
     </div>
